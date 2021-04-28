@@ -11,8 +11,6 @@ import classname from 'classnames';
 // helpers
 import { removeScrollOnPopup } from 'helpers';
 
-import { SystemIcon } from 'components/atoms';
-
 // styles
 import './styles.scss';
 

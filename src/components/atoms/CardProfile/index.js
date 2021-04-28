@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classname from 'classnames';
 import './style.scss';
-import H4 from '../H4';
 import Dropdown from "react-bootstrap/Dropdown";
 
 
@@ -20,9 +18,6 @@ const CardProfile = ({
                          onUpdateContact,
                          updateData
                      }) => {
-    const classNames = classname('a-card', className, variant, {
-        'elevation-card': elevation
-    });
 
     let getImgUrl = url => {
         if (url.includes("https") || url.includes("http")) {
