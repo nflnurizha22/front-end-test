@@ -65,7 +65,7 @@ const Popup = ({
                     type="button"
                     onClick={handleClickClosePopup}
                   >
-                    <SystemIcon name="close-32" dsize="32" />
+                     <span>&times;</span>
                   </button>
                 )}
                 {image !== '' && (
