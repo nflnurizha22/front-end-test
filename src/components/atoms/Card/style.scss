@@ -1,0 +1,46 @@
+/* ==========================================================================
+Styles for Card component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card component
+
+.a-card {
+  width: 100%;
+  height: inherit;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+
+  &.small {
+    padding: 7px 8px;
+  }
+
+  &.elevation-card {
+    @include shadow('on-white-card');
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
+
+  .a-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &--title {
+      margin-bottom: 13px;
+    }
+  }
+
+  &--image {
+    height: 135px;
+    width: 288px;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border-radius: 4px;
+  }
+}

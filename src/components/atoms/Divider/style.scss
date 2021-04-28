@@ -1,0 +1,22 @@
+/* ==========================================================================
+Styles for HomePage component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Divider component
+
+.a-divider {
+  padding: 8px 0px 16px;
+  width: 100%;
+  border-bottom: solid 1px color(grey, 50);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: fw(bold);
+  color: color(grey, 100);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}

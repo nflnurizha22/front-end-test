@@ -1,0 +1,121 @@
+/* ==========================================================================
+Styles for tag component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles tag component
+
+.a-tag {
+  padding: 0px 8px;
+  font-size: fz(mparagraph);
+  margin: 0;
+  height: 24px;
+  text-transform: capitalize;
+  font-weight: fw(bold);
+  border-radius: 4px;
+  color: white;
+  background-color: color(grey, 125);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  //type
+  &.rounded {
+    border-radius: 100px;
+    border: solid 1px #394452;
+  }
+
+  //size
+  &.small {
+    font-size: 9px;
+    height: 16px;
+  }
+
+  &.large {
+    height: 28px;
+    font-size: 1.6rem;
+  }
+
+  //variant
+  &.info {
+    background: #2e5aac;
+  }
+
+  &.success {
+    background: #287d3c;
+  }
+
+  &.warning {
+    background: #ffbc1f;
+  }
+
+  &.error {
+    background: #da1414;
+  }
+
+  //family
+  &.inverted {
+    color: #6D7580;
+    border-color: #EBEEF2;
+    background-color: #EBEEF2;
+
+    &.info {
+      background: rgba($color: #2e5aac, $alpha: 0.1);
+      border: solid 1px #2e5aac;
+      color: #2e5aac;
+    }
+
+    &.success {
+      background: rgba($color: #287d3c, $alpha: 0.1);
+      border: solid 1px #287d3c;
+      color: #287d3c;
+    }
+
+    &.warning {
+      background: rgba($color: #ffbc1f, $alpha: 0.1);
+      border: solid 1px #ffbc1f;
+      color: #ffbc1f;
+    }
+
+    &.error {
+      background: rgba($color: #da1414, $alpha: 0.1);
+      border: solid 1px #da1414;
+      color: #da1414;
+    }
+  }
+
+  &.outlined {
+    color: color(grey, 125);
+    border: solid 1px color(grey, 75);
+
+    &.info {
+      border: solid 1px #2e5aac;
+      color: #2e5aac;
+    }
+
+    &.success {
+      border: solid 1px #287d3c;
+      color: #287d3c;
+    }
+
+    &.warning {
+      border: solid 1px #ffbc1f;
+      color: #ffbc1f;
+    }
+
+    &.error {
+      border: solid 1px #da1414;
+      color: #da1414;
+    }
+  }
+}

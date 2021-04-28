@@ -1,0 +1,228 @@
+/* ==========================================================================
+Styles for Button component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Button component
+
+.a-button {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  min-height: 40px;
+  padding: 7px 31px;
+  font-size: fz(button-default);
+  font-weight: fw(bold);
+  line-height: lh(button-default);
+  letter-spacing: 0.12px;
+  border: solid 2px color(grey, 50);
+  background-color: color(grey, 50);
+  color: color(white);
+  border-radius: 0.6rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: capitalize;
+
+  @include active-visited-target-blank-button {
+    border: solid 1px color(grey, 50);
+    background-color: color(grey, 50);
+    color: color(white);
+  }
+  @include hover-button('default');
+  @include small {
+    font-size: fz(mbutton-default);
+    line-height: lh(mbutton-default);
+    min-width: 100%;
+    min-height: 40px;
+    padding: 3px 31px 3px;
+  }
+
+  &.small {
+    min-height: 28px !important;
+    font-size: fz(mbutton-default) !important;
+    line-height: lh(mbutton-default) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  &.rounded {
+    border-radius: 20rem;
+  }
+
+  &.border {
+    background-color: transparent;
+    border: solid 2px color(grey, 50);
+  }
+
+  &.borderless {
+    background-color: transparent;
+    border: transparent;
+    color: color(grey, 100);
+    font-weight: fw(bold);
+  }
+
+  &.primary {
+    color: color(white);
+    background-color: color(blue, 100);
+    border-color: color(blue, 100);
+    @include active-visited-target-blank-button {
+      background-color: color(blue, 100);
+      border-color: color(blue, 100);
+    }
+    @include hover-button('primary');
+    @media (hover: none) {
+      &:hover {
+        background-color: color(blue, 150);
+        border-color: color(blue, 150);
+      }
+      &:active {
+        background-color: color(blue, 150);
+        border-color: color(blue, 150);
+      }
+    }
+
+    &.inactive-primary {
+      color: color(grey, 20);
+      background-color: color(blue, 50);
+      cursor: not-allowed;
+      pointer-events: none;
+      border-color: transparent;
+    }
+
+    &.border {
+      background-color: transparent;
+      border: solid 2px color(blue, 100);
+      color: color(blue, 100);
+
+      @include hover-button('primary');
+      @media (hover: none) {
+        &:hover {
+          background-color: color(blue, 150);
+          border-color: color(blue, 150);
+        }
+        &:active {
+          background-color: color(blue, 150);
+          border-color: color(blue, 150);
+        }
+      }
+
+      &.inactive-primary {
+        color: color(blue, 50) !important;
+
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        border-color: color(blue, 50) !important;
+      }
+    }
+
+    &.borderless {
+      background-color: transparent;
+      border: transparent;
+      color: color(blue, 100);
+      font-weight: fw(bold);
+
+      &.inactive-primary {
+        color: color(blue, 50) !important;
+        background-color: transparent !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &.secondary {
+    color: color(white);
+    background-color: color(orange, 100);
+    border-color: color(orange, 100);
+    @include active-visited-target-blank-button {
+      background-color: color(orange, 100);
+      border-color: color(orange, 100);
+    }
+    @include hover-button('secondary');
+    @media (hover: none) {
+      &:hover {
+        background-color: color(orange, 150);
+        border-color: color(orange, 150);
+      }
+      &:active {
+        background-color: color(orange, 150);
+        border-color: color(orange, 150);
+      }
+    }
+
+    &.inactive-secondary {
+      color: color(grey, 20);
+      background-color: color(orange, 50);
+      cursor: not-allowed;
+      pointer-events: none;
+      border-color: transparent;
+    }
+
+    &.border {
+      background-color: transparent;
+      border: solid 2px color(orange, 100);
+      color: color(orange, 100);
+
+      @include hover-button('secondary');
+      @media (hover: none) {
+        &:hover {
+          background-color: color(orange, 150);
+          border-color: color(orange, 150);
+        }
+        &:active {
+          background-color: color(orange, 150);
+          border-color: color(orange, 150);
+        }
+      }
+
+      &.inactive-secondary {
+        color: color(orange, 50) !important;
+
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        border-color: color(orange, 50) !important;
+      }
+    }
+
+    &.borderless {
+      background-color: transparent;
+      border: transparent;
+      color: color(orange, 100);
+      font-weight: fw(bold);
+
+      &.inactive-secondary {
+        color: color(orange, 50) !important;
+        background-color: transparent !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+// transaction action button
+.action-button {
+  background: transparent;
+  color: #9098A1;
+  border: 1px solid;
+  font-size: small;
+  padding: 5px 1.3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:hover {
+    background: transparent;
+    color: #9098A1;;
+  }
+  img {
+    margin-right: 5px;
+  }
+}

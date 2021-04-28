@@ -1,0 +1,46 @@
+/* ==========================================================================
+Styles for HomePage component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles contact component
+
+@include page-wrapper;
+
+.contact-content {
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 0px;
+
+  &.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--empty {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: fw(bold);
+    color: #9c9c9c;
+
+    img {
+      background-image: url('../../../assets/images/icons/ic-list.png');
+      background-size: cover;
+      height: 100px;
+    }
+
+    > div {
+      padding: 10px;
+    }
+  }
+
+  &--exist {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.tab-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  border-bottom: 1px solid #F59823;
+  &__item {
+    color: #F59823;
+    padding: 28px;
+    cursor: pointer;
+    &.active {
+      color: #FF6500;
+      border-bottom: 3px solid #FF6500;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/* ==========================================================================
+Styles for p component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles p component
+
+.a-paragraph {
+  font-size: fz(paragraph);
+  font-weight: fw(regular);
+  line-height: lh(paragraph);
+  color: #222222;
+}

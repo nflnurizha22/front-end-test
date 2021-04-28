@@ -1,0 +1,83 @@
+/* ==========================================================================
+Styles for Sidenav component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function",
+  "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles Sidenav component
+
+.o-sidenav
+{
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #78c4d4;
+  overflow-x: hidden;
+  transition: all .2s ease-in;
+  .img-sidenav-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  &__mobile,
+  .close-sidebar {
+    display: none;
+  }
+}
+
+
+@include small {
+  .o-sidenav {
+    width: 90%;
+    transform: translateX(-100%);
+    transition: all .2s ease-in;
+    z-index: 99;
+    .close-sidebar {
+      display: flex;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+    &__mobile {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      padding: 2rem !important;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all .2s ease-in;
+      &--menu,
+      &--notif {
+        display: flex;
+        align-items: center;
+      }
+      .ic-menu {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+      &.sticky {
+        background: linear-gradient(48.73deg, #00549e -2.95%, #0063aa 18.02%, #0071b5 45.98%, #0080bf 75.85%, #008fc9 100%);
+        transition: all .2s ease-in;
+      }
+    }
+  }
+  &.show {
+    transform: translateX(0);
+    transition: all .2s ease-in;
+  }
+}

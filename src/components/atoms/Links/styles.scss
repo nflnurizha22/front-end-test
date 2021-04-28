@@ -1,0 +1,304 @@
+/* ==========================================================================
+Styles for Links component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Links component
+.a-links {
+  text-decoration: none;
+  color: color(primary, 100);
+  transition: color 0.25s ease;
+  @include font-weight-default-reguler;
+  &:hover,
+  &:active {
+    color: color(primary, 120);
+  }
+  &.links-body {
+    font-size: fz(links-body);
+    line-height: lh(links-body);
+    @include small {
+      font-size: fz(mlinks-body);
+      line-height: lh(mlinks-body);
+    }
+  }
+  &.links-additional-info {
+    font-size: fz(links-info);
+    line-height: lh(links-info);
+    @include small {
+      font-size: fz(mlinks-info);
+      line-height: lh(mlinks-info);
+    }
+  }
+  &.red {
+    color: color(system, error);
+    &:hover,
+    &:active {
+      color: color(system, error);
+    }
+  }
+  &.white {
+    color: color(white);
+    &:hover,
+    &:active {
+      color: color(grey, 50);
+    }
+  }
+  &.black {
+    color: color(black);
+    &:hover,
+    &:active {
+      color: color(navy, 50);
+    }
+  }
+  &.orange {
+    color: color(orange, 100);
+    &:hover,
+    &:active {
+      color: color(orange, 120);
+    }
+  }
+  &.cyan {
+    color: color(cyan, 100);
+    &:hover,
+    &:active {
+      color: color(cyan, 120);
+    }
+  }
+  &.blue {
+    color: color(blue, 100);
+    &:hover,
+    &:active {
+      color: color(blue, 120);
+    }
+  }
+  &.navy {
+    color: color(navy, 100);
+    &:hover,
+    &:active {
+      color: color(navy, 120);
+    }
+  }
+  &.brown {
+    color: color(brown, 100);
+    &:hover,
+    &:active {
+      color: color(brown, 120);
+    }
+  }
+  &.dark-yellow {
+    color: color(dark-yellow, 100);
+    &:hover,
+    &:active {
+      color: color(dark-yellow, 120);
+    }
+  }
+  &.blue-sky {
+    color: color(blue-sky, 100);
+    &:hover,
+    &:active {
+      color: color(blue-sky, 120);
+    }
+  }
+  &.grass {
+    color: color(grass, 100);
+    &:hover,
+    &:active {
+      color: color(grass, 120);
+    }
+  }
+  &.navy100 {
+    color: color(navy, 100);
+    &:hover,
+    &:active {
+      color: darken(color(navy, 100), 2.5%);
+    }
+  }
+  &.gray {
+    color: #73808c;
+    &:hover,
+    &:active {
+      color: #73808c;
+    }
+  }
+  &.underline {
+    text-decoration: underline;
+  }
+  &:hover {
+    color: color(grey, 100);
+    // text-decoration: underline;
+    @include small {
+      text-decoration: none;
+    }
+  }
+
+  &.show {
+    font-weight: fw(bold);
+    font-size: fz(paragraph);
+  }
+
+  &.bold {
+    font-size: fw(bold);
+  }
+
+  &.small {
+    font-size: 1.6rem;
+  }
+
+  &.primary {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    min-height: 40px;
+    padding: 7px 31px;
+    border-radius: 0.6rem;
+    transition: all 0.25s ease;
+    color: color(white);
+    background-color: color(blue, 100);
+    border-color: color(blue, 100);
+    @include active-visited-target-blank-button {
+      background-color: color(blue, 100);
+      border-color: color(blue, 100);
+    }
+    @include hover-button('primary');
+    @media (hover: none) {
+      &:hover {
+        background-color: color(blue, 150);
+        border-color: color(blue, 150);
+      }
+      &:active {
+        background-color: color(blue, 150);
+        border-color: color(blue, 150);
+      }
+    }
+
+    &.inactive-primary {
+      color: color(grey, 20);
+      background-color: color(blue, 50);
+      cursor: not-allowed;
+      pointer-events: none;
+      border-color: transparent;
+    }
+
+    &.border {
+      background-color: transparent;
+      border: solid 2px color(blue, 100);
+      color: color(blue, 100);
+
+      @include hover-button('primary');
+      @media (hover: none) {
+        &:hover {
+          background-color: color(blue, 150);
+          border-color: color(blue, 150);
+        }
+        &:active {
+          background-color: color(blue, 150);
+          border-color: color(blue, 150);
+        }
+      }
+
+      &.inactive-primary {
+        color: color(blue, 50) !important;
+
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        border-color: color(blue, 50) !important;
+      }
+    }
+
+    &.borderless {
+      background-color: transparent;
+      border: transparent;
+      color: color(blue, 100);
+      font-weight: fw(bold);
+
+      &.inactive-primary {
+        color: color(blue, 50) !important;
+        background-color: transparent !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &.secondary {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    min-height: 40px;
+    padding: 7px 31px;
+    border-radius: 0.6rem;
+    transition: all 0.25s ease;
+    color: color(white);
+    background-color: color(orange, 100);
+    border-color: color(orange, 100);
+    @include active-visited-target-blank-button {
+      background-color: color(orange, 100);
+      border-color: color(orange, 100);
+    }
+    @include hover-button('secondary');
+    @media (hover: none) {
+      &:hover {
+        background-color: color(orange, 150);
+        border-color: color(orange, 150);
+      }
+      &:active {
+        background-color: color(orange, 150);
+        border-color: color(orange, 150);
+      }
+    }
+
+    &.inactive-secondary {
+      color: color(grey, 20);
+      background-color: color(orange, 50);
+      cursor: not-allowed;
+      pointer-events: none;
+      border-color: transparent;
+    }
+
+    &.border {
+      background-color: transparent;
+      border: solid 2px color(orange, 100);
+      color: color(orange, 100);
+
+      @include hover-button('secondary');
+      @media (hover: none) {
+        &:hover {
+          background-color: color(orange, 150);
+          border-color: color(orange, 150);
+        }
+        &:active {
+          background-color: color(orange, 150);
+          border-color: color(orange, 150);
+        }
+      }
+
+      &.inactive-secondary {
+        color: color(orange, 50) !important;
+
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        border-color: color(orange, 50) !important;
+      }
+    }
+
+    &.borderless {
+      background-color: transparent;
+      border: transparent;
+      color: color(orange, 100);
+      font-weight: fw(bold);
+
+      &.inactive-secondary {
+        color: color(orange, 50) !important;
+        background-color: transparent !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        border-color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+/* ==========================================================================
+Styles for Body component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles InputMaterial component
+
+.message {
+  margin-left: 16px !important;
+  margin-bottom: -10px !important;
+  font-size: 1.4rem;
+  font-weight: fw(light);
+  color: #6b7077;
+  text-transform: capitalize;
+  line-height: 2;
+}
+
+.a-input-material {
+  position: relative;
+
+&.field-disabled {
+  input {
+    font-size: 1.8rem;
+    padding: 1em;
+    display: block;
+    width: calc(100% - 0px);
+    border: none;
+    background-color: color(grey, 20);
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+    }
+    &:focus ~ label,
+    &:valid ~ label {
+      top: -7px;
+      font-size: 12px;
+      color: #00549e;
+      background: #fff;
+      padding: 0px 5px;
+    }
+    &:not(:focus) ~ label,
+    &:not(:valid) ~ label {
+      color: color(grey, 150);
+    }
+    &:focus ~ .border {
+      border: 2px solid #00549e;
+      border-radius: 5px;
+      position: absolute;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      top: 0px;
+      pointer-events: none;
+    }
+
+    label {
+      color: color(grey, 75);
+      font-weight: fw(bold);
+      line-height: 2.4;
+      background-color: color(grey, 20);
+    }
+  }
+}
+
+  label {
+    text-transform: capitalize;
+    position: absolute;
+    font-size: 1.6rem;
+    font-weight: fw(bold);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: rgba($color: #09101d, $alpha: 0.8);
+    padding: 0px 16px;
+    margin: 12px 5px;
+    transition: 0.1s ease-out;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  input {
+    font-size: 1.6rem;
+    width: 100%;
+    z-index: 2;
+    outline: none;
+    border: 1px solid #a5abb3;
+    border-radius: 5px;
+    padding: 16px;
+    color: gray;
+    transition: 0.1s ease-out;
+    margin-top: 24px;
+
+    &:focus {
+      border-color: color(system, normal);
+
+      + label {
+        color: color(system, normal);
+        top: 0;
+        transform: translateY(-5%) scale(0.9);
+        padding: 0px 10px;
+        margin-left: 6px;
+      }
+    }
+
+    &:not(:placeholder-shown) + label {
+      top: 0;
+      padding: 0px 10px;
+      margin-left: 6px;
+      transform: translateY(-5%) scale(0.9);
+    }
+  }
+
+  &.success {
+    input {
+      &:focus {
+        border-color: color(system, successful);
+        + label {
+          color: color(system, successful);
+        }
+      }
+    }
+  }
+
+  &.warning {
+    input {
+      &:focus {
+        border-color: color(system, warning);
+        + label {
+          color: color(system, warning);
+        }
+      }
+    }
+  }
+
+  &.is-error {
+    input {
+      border-color: color(system, error);
+      &:focus {
+        border-color: color(system, error);
+        + label {
+          color: color(system, error);
+        }
+      }
+    }
+  }
+}
+
+.error-message {
+  font-size: small;
+  margin-top: .5rem;
+}
+
+// custom select material
+.MuiFormLabel-root,
+.MuiInputBase-root,
+.MuiMenuItem-root{
+  font-size: 1.6rem !important;
+}
+
+.MuiFormHelperText-root {
+  font-size: small !important;
+  margin: .5rem 0 !important;
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+  transform: translate(10px, -6px) scale(0.9) !important;
+  color: rgba(9, 16, 29, 0.8) !important;
+  font-weight: 600 !important;
+  background: white;
+  padding: 0 10px;
+}
+
+.MuiSvgIcon-root {
+  width: 1.6em !important;
+  height: 1.6em !important;
+}
+
+.MuiSelect-select {
+  &:focus {
+    background: transparent !important;
+  }
+}

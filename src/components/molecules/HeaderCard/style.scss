@@ -1,0 +1,83 @@
+/* ==========================================================================
+Styles for HeaderCard component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles HeaderCard component
+
+.m-header-card {
+  height: 190px;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(
+    48.73deg,
+    #78c4d4 -2.95%,
+    #78c4d4 18.02%,
+    #78c4d4 45.98%,
+    #78c4d4 75.85%,
+    #78c4d4 100%
+  );
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: space-between;
+
+  #title {
+    font-size: 3.6rem;
+    font-weight: fw(bold);
+    color: white;
+  }
+
+  #unit-usaha-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__content {
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100% !important;
+    align-items: center;
+    height: 100%;
+  }
+  &__accent {
+    position: absolute;
+    display: none;
+  }
+  
+  @include small {
+    border-radius: 0;
+    min-height: 220px;
+    &__img {
+      max-width: 130px;
+      &.--left {
+        position: absolute;
+        bottom: 0;
+        left: -30px;
+      }
+      &.--right {
+        position: absolute;
+        bottom: 0;
+        right: -30px;
+      }
+    }
+    &__accent {
+      position: absolute;
+      width: 147px;
+      height: 147px;
+      left: -7.5rem;
+      top: -5.3rem;
+      background: #00549E;
+      mix-blend-mode: normal;
+      border-radius: 100%;
+    }
+  }
+}

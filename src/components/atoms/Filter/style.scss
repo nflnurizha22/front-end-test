@@ -1,0 +1,25 @@
+/* ==========================================================================
+Styles for Filter component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Filter component
+
+.a-filter {
+  min-width: 110px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  font-size: fz(mparagraph);
+  font-weight: fw(regular);
+  border: solid 1px color(grey, 25);
+  cursor: pointer;
+}
+
+.dropdown-shape {
+}

@@ -1,0 +1,41 @@
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles TextSideNav component
+
+.a-text-top-sidenav {
+  font-size: fz(sidenav);
+  line-height: lh(lh-top-nav);
+  text-decoration: none;
+  text-transform: capitalize;
+  margin-left: 10px;
+  margin-top: 7px;
+  display: inline-block;
+  vertical-align: top;
+  transition: color 0.25s ease;
+  font-weight: fw(bold);
+  @include colors-all-font-hover;
+  @include small {
+    font-size: fz(msidenav);
+    line-height: lh(mtop-nav);
+    vertical-align: text-top;
+  }
+}
+
+.text-wrapper {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 7rem;
+  background-color: transparent;
+
+  &:hover {
+    background-color: #006ebf;
+  }
+
+  &.active {
+    background-color: #006ebf;
+  }
+}

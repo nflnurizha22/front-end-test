@@ -1,0 +1,77 @@
+/* ==========================================================================
+Styles for Navbar component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Navbar component
+
+.o-navbar {
+  position: relative;
+  height: 70px;
+  background-color: white;
+  margin-left: 250px;
+  display: flex;
+  justify-content: space-between;
+
+  > .o-input {
+    padding: 11px 20px;
+    > input {
+      width: 480px !important;
+
+      &::placeholder {
+        &:before {
+          content: '\e840' !important;
+        }
+      }
+    }
+  }
+
+  .nav-information {
+    display: flex;
+    align-items: center;
+    &__notification {
+      height: 100%;
+      width: 85px;
+      border-left: 2px solid color(grey, 20);
+      border-right: 2px solid color(grey, 20);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__profile {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      > .a-avatar {
+        margin: 0 20px;
+        position: relative;
+      }
+
+      > .a-h4 {
+        margin-top: 15px;
+        margin-right: 16px;
+        vertical-align: baseline !important;
+        color: color(system, normal);
+      }
+      .dropdown-profile {
+        position: absolute;
+        top: 100%;
+        z-index: 9;
+        right: 10%;
+        bottom: unset;
+        width: 170px;
+        box-shadow: 0 2px 4px 0 rgba(32, 32, 35, 0.25);
+      }
+    }
+
+  }
+  @include small {
+    display: none;
+  }
+}

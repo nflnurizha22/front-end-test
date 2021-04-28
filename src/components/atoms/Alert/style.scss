@@ -1,0 +1,46 @@
+/* ==========================================================================
+Styles for Body component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Alert component
+
+.a-alert {
+  height: 32px;
+  width: inherit;
+  border-radius: 8px;
+  background-color: #eef2fa;
+  color: #2e5aac;
+  font-size: 1.4rem;
+  font-weight: fw(light);
+  padding: 6px;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+
+  &.small {
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    margin: 0px 8px 0px 10px;
+  }
+
+  &.successful {
+    background-color: #edf9f0;
+    color: color(system, successful);
+  }
+
+  &.warning {
+    background-color: #fceecf;
+    color: color(system, warning);
+  }
+
+  &.error {
+    background-color: #feefef;
+    color: color(system, error);
+  }
+}

@@ -1,0 +1,51 @@
+
+@import '../../../../../assets/styles/helper/function',
+'../../../../..//assets/styles/helper/mixin',
+'../../../../..//assets/styles/project/init/variables';
+
+.modal-contact {
+  max-width: 545px !important;
+
+  .form-contact-wrapper {
+    margin-top: 24px;
+
+    .avatar {
+      font-size: 1.2rem;
+      text-align: center;
+      color: #677e8c;
+      font-weight: 400;
+      margin: 1.2rem 0;
+
+      .a-avatar {
+        margin: 0 auto;
+        margin-bottom: 0px;
+        position: relative !important;
+        margin-bottom: 8px;
+      }
+    }
+
+    &--button {
+      width: 100% !important;
+      margin-top: 50px !important;
+      @include small {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+
+@include small {
+  .modal-contact {
+    position: fixed !important;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0 !important;
+    min-width: 100%;
+    padding-top: 10rem !important;
+    overflow-y: auto;
+    .popup-button-close {
+      display: none;
+    }
+  }
+}
