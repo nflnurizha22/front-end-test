@@ -45,7 +45,6 @@ const Contact = () => {
             setModalEditActive(true);
         }
     }
-
     useEffect(() => {
         dispatch(getContactList({}));
     }, [true]);
@@ -92,7 +91,7 @@ const Contact = () => {
                 </HeaderCard>
 
                 <div className="row">
-                    {listContact.data.length > 0 ? (
+                    {listContact.data ? (
                         <div className="contact-content--exist">
                             <div className="row">
                                 {
