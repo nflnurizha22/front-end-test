@@ -64,22 +64,22 @@ const Contact = () => {
             <SideNav/>
             <Navbar/>
             <div className={classNames}>
-            <EditModalContact
+            {isModalEditActive ?  <EditModalContact
                     showPopup={isModalEditActive}
                     isModalClose={(e) => setModalEditActive(e)}
                     onSubmitSuccess={() => setAlert(true)}
                     putContact={putContact}
                     getContactList={getContactList}
                     getDetailContact={detailContact}
-                />
-                <AddModalContact
+                />  : null}
+                {isModalActive ? <AddModalContact
                     showPopup={isModalActive}
                     isModalClose={(e) => setModalActive(e)}
                     onSubmitSuccess={() => setAlert(true)}
                     postContact={postContact}
                     getContactList={getContactList}
                     getDetailContact={detailContact}
-                />
+                /> : null}
                 <HeaderCard className="o-contact-header__card">
                     <div>
                         <div id="title">Contact</div>
