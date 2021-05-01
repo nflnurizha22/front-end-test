@@ -1,3 +1,6 @@
+# For Heroku deployment
+Change $PORT to 80 in default.conf.template
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
